@@ -11,16 +11,16 @@
 
 set $mod Mod4
 
-set $programming •
-set $office •
-set $files •
-set $mail •
-set $web •
-set $media •
-set $games •
-set $torrent •
-set $irc •
-set $useless •
+set $programming code
+set $office work
+set $files files
+set $mail mail
+set $web www
+set $media tunes
+set $games game
+set $torrent legal
+set $irc chat
+set $useless tools
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
