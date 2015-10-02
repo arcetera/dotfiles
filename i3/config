@@ -18,7 +18,7 @@ set $mail mail
 set $web www
 set $media tunes
 set $games game
-set $torrent legal
+set $torrent dl
 set $irc chat
 set $useless tools
 
