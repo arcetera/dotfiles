@@ -1,12 +1,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/arc/.oh-my-zsh
-export EDITOR=vim
+export EDITOR=nvim
+export ANDROID_HOME=/opt/android-sdk
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="ys"
+ZSH_THEME="dallas"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -84,5 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval $(thefuck --alias)
-alias multimonitor="xrandr --output HDMI1 --auto --right-of eDP1 && feh --bg-fill ~/Pictures/city.jpg --bg-fill ~/Pictures/city.jpg"
-
+alias multimonitor="xrandr --output HDMI1 --auto --right-of eDP1 && feh --bg-fill ~/Pictures/lpr.png --bg-fill ~/Pictures/lpr.png && xset s off -dpms"
+alias ranger="python -W ignore /usr/bin/ranger"
+alias sshserver="ssh arc@97.89.162.156"
+alias clamshell="xrandr --output eDP1 --off --output HDMI1 --auto && xset s off -dpms"

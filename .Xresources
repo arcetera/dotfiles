@@ -6,10 +6,10 @@ URxvt.cursorBlink: 0
 URxvt.cursorUnderline: 0
 
 !FONTS
-*font: xft:DejaVuSansMono:size=9
-*boldfont: xft:DejaVuSansMono:bold:size=9
+*font: xft:ProggyCleanTTSZBP:size=12
+*boldfont: xft:ProggyCleanTTSZBP:bold:size=12
 *italicfont: xft:DejaVuSansMono-Oblique:size=9
-*.letterSpace: -2
+*.letterSpace: -1
 !bitmap
 !*.font:      -*-terminus-medium-r-*-*-20-*-*-*-*-*-*-*
 !*.boldfont:  -*-terminus-bold-*-*-*-20-*-*-*-*-*-*-*
