@@ -6,8 +6,8 @@ URxvt.cursorBlink: 0
 URxvt.cursorUnderline: 0
 
 !FONTS
-*font: xft:ProggyCleanTTSZBP:size=12
-*boldfont: xft:ProggyCleanTTSZBP:bold:size=12
+*font: xft:Inconsolata for Powerline:size=10
+*boldfont: xft:Inconsolata for Powerline:bold:size=10
 *italicfont: xft:DejaVuSansMono-Oblique:size=9
 *.letterSpace: -1
 !bitmap
@@ -38,25 +38,25 @@ URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 ! URxvt.transparent: true
 ! URxvt.shading: 20
 
-! Base16 Colors
+! Base16 Ocean
+! Scheme: Chris Kempson (http://chriskempson.com)
 
-
-#define base00 #181818
-#define base01 #282828
-#define base02 #383838
-#define base03 #585858
-#define base04 #b8b8b8
-#define base05 #d8d8d8
-#define base06 #e8e8e8
-#define base07 #f8f8f8
-#define base08 #ab4642
-#define base09 #dc9656
-#define base0A #f7ca88
-#define base0B #a1b56c
-#define base0C #86c1b9
-#define base0D #7cafc2
-#define base0E #ba8baf
-#define base0F #a16946
+#define base00 #2b303b
+#define base01 #343d46
+#define base02 #4f5b66
+#define base03 #65737e
+#define base04 #a7adba
+#define base05 #c0c5ce
+#define base06 #dfe1e8
+#define base07 #eff1f5
+#define base08 #bf616a
+#define base09 #d08770
+#define base0A #ebcb8b
+#define base0B #a3be8c
+#define base0C #96b5b4
+#define base0D #8fa1b3
+#define base0E #b48ead
+#define base0F #ab7967
 
 *.foreground:   base05
 *.background:   base00
@@ -81,10 +81,10 @@ URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 *.color15:      base07
 
 ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! ! use 'shell' template to set these if necessary
-! *.color16:      base09
-! *.color17:      base0F
-! *.color18:      base01
-! *.color19:      base02
-! *.color20:      base04
-! *.color21:      base06
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06

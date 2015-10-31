@@ -1,13 +1,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/arc/.oh-my-zsh
-export EDITOR=nvim
+export EDITOR=vim
 export ANDROID_HOME=/opt/android-sdk
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="dallas"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -55,7 +55,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/bin:/usr/bin/core_perl"
+export PATH="/usr/bin:/usr/bin/core_perl:/home/arc/.gem/ruby/2.2.0/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -85,7 +85,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval $(thefuck --alias)
-alias multimonitor="xrandr --output HDMI1 --auto --right-of eDP1 && feh --bg-fill ~/Pictures/lpr.png --bg-fill ~/Pictures/lpr.png && xset s off -dpms"
-alias ranger="python -W ignore /usr/bin/ranger"
+alias multimonitor="xrandr --output HDMI1 --auto --right-of eDP1 && feh --bg-fill ~/Pictures/newwp.png --bg-fill ~/Pictures/newwp.png && xset s off -dpms"
+#alias ranger="python -W ignore /usr/bin/ranger"
 alias sshserver="ssh arc@97.89.162.156"
 alias clamshell="xrandr --output eDP1 --off --output HDMI1 --auto && xset s off -dpms"
+
+transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
+tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }; alias transfer=transfer 
