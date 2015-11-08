@@ -56,4 +56,14 @@ fi
 xss-lock -- i3lock -c 181818 &
 syndaemon -i 0.5 -d &
 unclutter &
-exec i3
+urxvt -e tmux &
+redshift &
+feh --bg-fill /home/arc/pictures/newwp.jpg --bg-fill /home/arc/pictures/newwp.jpg &
+xbacklight -set 50 &
+compton -cGb --backend=glx --vsync=opengl &
+dunst &
+dropbox &
+sxhkd &
+/home/arc/.local/bin/shit.sh | lemonbar -B#2b303b -d -f "inconsolata:size=10" &
+tail -f /tmp/grp/.fifo | lemonbar -B#2b303b -d -f "inconsolata:size=10" -g 500 &
+exec swm

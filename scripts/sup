@@ -1,0 +1,9 @@
+#!/bin/bash
+# sup - simple image uploader - sftp image uploader - shitty image uploader
+
+IMAGE=$1
+
+sftp arc@arcetera.party -b <<EOF
+cd public_html/dev/null
+put $IMAGE
+EOF

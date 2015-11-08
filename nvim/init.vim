@@ -31,12 +31,22 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
+" Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tkztmk/vim-vala'
 Plugin 'chriskempson/base16-vim'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'vim-latex/vim-latex'
+" Plugin 'edkolev/tmuxline.vim'
+Plugin 'tpope/vim-rails'
+" Plugin 'vim-ruby/vim-ruby'
+" Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
+Plugin 'kien/ctrlp.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'taglist.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,5 +66,38 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 syntax on
-colorscheme base16-default
+colorscheme base16-ocean
 set number
+set t_Co=256
+set bg=dark
+set tabstop=4
+set softtabstop=4
+set expandtab
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set laststatus=2
+nnoremap <space> za
+set foldmethod=indent
+nnoremap j gj
+nnoremap k gk
+if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+" let g:airline_theme="simple"
+"let g:airline_powerline_fonts = 1
+let g:syntastic_error_symbol = "X"
+let g:syntastic_warning_symbol = "!"
+"let g:airline#extensions#tabline#enabled = 1
+let g:lightline = {
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
+

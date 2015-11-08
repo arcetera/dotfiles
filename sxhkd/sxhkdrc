@@ -1,0 +1,72 @@
+super + d
+        dmenu_run -b -fn Inconsolata -nb black -nf darkgrey -sf black -sb darkgrey
+
+super + Return
+        urxvt -e tmux
+
+super + shift + q
+        killw $(pfw)
+
+super + {h,j,k,l}
+        wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+
+super + alt + {h,j,k,l}
+        wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+
+super + Tab
+        focus.sh next
+
+super + Escape
+        killall sxhkd
+
+super + {1,2,3,4,5,6,7,8,9,0}
+        grp.sh view {1,2,3,4,5,6,7,8,9,10}
+
+super + shift + {1,2,3,4,5,6,7,8,9,0}
+        grp.sh add $(pfw) {1,2,3,4,5,6,7,8,9,10}
+
+super + shift + Backspace
+        grp.sh remove $(pfw)
+
+super + alt + {1,2,3,4,5,6,7,8,9,0}
+        grp.sh hide {1,2,3,4,5,6,7,8,9,0}
+
+XF86AudioRaiseVolume
+        amixer -D pulse sset Master 5%+
+
+XF86AudioLowerVolume
+        amixer -D pulse sset Master 5%-
+
+XF86AudioMute
+        amixer -D pulse -q set Master toggle
+
+XF86MonBrightnessUp
+        xbacklight -inc 10
+
+XF86MonBrightnessDown
+        xbacklight -dec 10
+
+XF86AudioPlay
+        cmus-remote -u
+
+XF86AudioNext
+        cmus-remote -n
+
+XF86AudioPrev
+        cmus-remote -r
+
+super + shift + e
+        killall xinit
+
+super + space
+        tile.sh
+
+super + f
+        fullscreen.sh $(pfw)
+
+super + b
+        switch_grid.sh
+
+super + w
+        pfw > ~/.scratch
+        mapw -t $(more ~/.scratch)
