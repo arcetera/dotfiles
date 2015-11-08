@@ -6,7 +6,7 @@ URxvt.cursorBlink: 0
 URxvt.cursorUnderline: 0
 
 !FONTS
-*font: xft:Inconsolata for Powerline:size=10
+*font: xft:Inconsolata for Powerline:size=10,xft:Symbola:size=9
 *boldfont: xft:Inconsolata for Powerline:bold:size=10
 *italicfont: xft:DejaVuSansMono-Oblique:size=9
 *.letterSpace: -1
