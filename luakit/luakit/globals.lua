@@ -1,6 +1,6 @@
 -- Global variables for luakit
 globals = {
-    homepage            = "http://google.com/",
+    homepage            = "http://arcetera.party/",
  -- homepage            = "http://github.com/mason-larobina/luakit",
     scroll_step         = 40,
     zoom_step           = 0.1,
@@ -50,10 +50,7 @@ soup.accept_policy = cookie_policy.always
 -- character (%) may need to be escaped by placing another % before or after
 -- it to avoid collisions with lua's string.format characters.
 -- See: http://www.lua.org/manual/5.1/manual.html#pdf-string.format
-search_engines = {
-    aur          = "https://aur.archlinux.org/packages.php?O=0&K=%s&do_Search=Go",
-    aw           = "https://wiki.archlinux.org/index.php/Special:Search?fulltext=Search&search=%s",
-    duckduckgo  = "https://duckduckgo.com/?q=%s",
+search_engines = { duckduckgo  = "https://duckduckgo.com/?q=%s",
     github      = "https://github.com/search?q=%s",
     google      = "https://google.com/search?q=%s",
     imdb        = "http://www.imdb.com/find?s=all&q=%s",

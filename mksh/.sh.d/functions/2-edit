@@ -1,0 +1,6 @@
+#!/bin/sh
+
+function e () {
+        [ -n "$VERBOSE" ] && echo "e: $EDITOR $@"
+        $EDITOR $@
+}

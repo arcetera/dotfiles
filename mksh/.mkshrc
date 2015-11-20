@@ -1,0 +1,22 @@
+#!/bin/mksh
+
+[[ -z "$KSH_VERSION" ]] && exit 1
+[[ -o login ]] && source $HOME/.profile
+
+[[ -e "$HOME/.sh.d/alias" ]] && source $HOME/.sh.d/alias
+
+# custom functions
+[[ -d $HOME/.sh.d/functions/ ]] && for i in $HOME/.sh.d/functions/*
+do
+        source $i
+done
+
+
+# settings
+set -o posix        # try to follow POSIX
+set -o bgnice       # prioritize foreground
+set -U
+
+bind ^L=clear-screen
+
+source $HOME/.sh.d/style

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+prompt () {
+        _ERR=$?
+
+        [ $_ERR -ne 0 ] && printf '\033[31m>\033[00m' || printf '>'
+        
+        printf ''
+}
+
+PS1='$(prompt) '

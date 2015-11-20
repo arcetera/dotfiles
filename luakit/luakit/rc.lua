@@ -3,10 +3,6 @@
 -----------------------------------------------------------------------
 
 require "lfs"
-require "downloads"
-require "downloads_chrome"
-require "adblock"
-require "adblock_chrome"
 
 if unique then
     unique.new("org.luakit")
@@ -181,19 +177,5 @@ if unique then
         w.win.urgency_hint = true
     end)
 end
-
---------------------------
--- Add download support --
---------------------------
-downloads.default_dir = os.getenv("HOME") .. "/downloads"
-downloads.add_signal("download-location", function (uri, file)
-    if not file or file == "" then
-        file = (string.match(uri, "/([^/]+)$")
-            or string.match(uri, "^w+://(.+)")
-            or string.match(uri, "/" "_")
-            or "untitled")
-    end
-    return downloads.default_dir .. "/" .. file
-end)
 
 -- vim: et:sw=4:ts=8:sts=4:tw=80
