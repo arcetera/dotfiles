@@ -4,7 +4,6 @@
 "/\ \/\ \ \ \_/ \ \ \/\ \/\ \/\ \ 
 "\ \_\ \_\ \___/ \ \_\ \_\ \_\ \_\
 " \/_/\/_/\/__/   \/_/\/_/\/_/\/_/ 
-
 execute pathogen#infect()
 set bg=dark
 syntax on
@@ -33,13 +32,12 @@ let g:syntastic_warning_symbol = "!"
 let g:startify_custom_header =
   \ map(split(system('fortune dbag | cowsay'), '\n'), '"   ". v:val') + ['','']
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"x":""}',
       \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
       \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
       \ },
@@ -52,3 +50,6 @@ let g:lightline = {
       \ 'subseparator': { 'left': '|', 'right': '|' }
       \ }
 set noshowmode
+let g:ycm_global_ycm_extra_conf = '/home/arc/.config/nvim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_min_num_of_chars_for_completion = 1
