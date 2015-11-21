@@ -1,0 +1,92 @@
+# Store message headers locally to speed things up.
+# If hcache is a folder, Mutt will create sub cache folders for each account which may speeds things up even more.
+set header_cache = ~/.cache/mutt
+
+# Store messages locally to speed things up, like searching message bodies.
+# Can be the same folder as header_cache.
+# This will cost important disk usage according to your e-mail amount.
+set message_cachedir = "~/.cache/mutt"
+
+# Specify where to save and/or look for postponed messages.
+#set postponed = +[Gmail]/Drafts
+
+# Allow Mutt to open new imap connection automatically.
+unset imap_passive
+
+# Keep IMAP connection alive by polling intermittently (time in seconds).
+set imap_keepalive = 300
+
+# How often to check for new mail (time in seconds).
+set mail_check = 120
+
+# --- vombatidae text colors ---
+# color normal color230 color234
+# color message color230 color234
+# --- slightly less yellow text colors ---
+#color normal color253color234 # mod
+# color normal color253color234color233 # mod
+# color normal color253color234color233default # mod
+color indicator color230 color238
+color status color101 color16
+# color tree color113 color234
+# color tree color173 color234
+color tree color208 color234
+color signature color102 color234
+color message color253 color234
+# color attachmentcolor117 color234
+color error color30 color234
+color tilde color130 color235
+color search color100 default
+color markers color138 default
+# mono bold reverse
+# color bold color173 color191
+# mono underline reverse
+# color underline color48 color191
+color quoted color107 color234 # quoted text
+color quoted1 color66 color234
+color quoted2 color32 color234
+color quoted3 color30 color234
+color quoted4 color99 color234
+color quoted5 color36 color234
+color quoted6 color114 color234
+color quoted7 color109 color234
+color quoted8 color41 color234
+color quoted9 color138 color234
+# color body cyan default "((ftp|http|https)://|news:)[^ >)\"\t]+"
+# color body cyan default "[-a-z_0-9.+]+@[-a-z_0-9.]+"
+# color body red default "(^| )\\*[-a-z0-9*]+\\*[,.?]?[ \n]"
+# color body green default "(^| )_[-a-z0-9_]+_[,.?]?[\n]"
+# color body red default "(^| )\\*[-a-z0-9*]+\\*[,.?]?[ \n]"
+# color body green default "(^| )_[-a-z0-9_]+_[,.?]?[ \n]"
+# color index color202color234 ~F # Flagged
+color index color39 color234 ~N # New
+color index color39 color234 ~O
+color index color229 color22 ~T # Tagged
+color index color240 color234 ~D # Deleted
+# ---
+#mono bodyreverse '^(subject):.*'
+#color bodyreversebrightwhite magenta'^(subject):.*'
+#mono bodyreversebrightwhitereverse '[[:alpha:]][[:alnum:]-]+:'
+#color bodyreversebrightwhitereverseblack cyan'[[:alpha:]][[:alnum:]-]+:'
+# --- header ---
+color hdrdefault color30 color233
+color header color132 color233 '^date:'
+color header color153 color233 '^(to|cc|bcc):'
+color header color120 color233 '^from:'
+color header color178 color233 '^subject:'
+color header color31 color233 '^user-agent:'
+color header color29 color233 '^reply-to:'
+#color headermagenta default '^(status|lines|date|received|sender|references):'
+#color headermagentamagenta default '^(pr|mime|x-|user|return|content-)[^:]*:'
+#color headermagentamagentabrightyellow default '^content-type:'
+#color headermagentamagentabrightyellowmagenta default '^content-type: *text/plain'
+# color headermagentamagentabrightyellowmagentabrightgreen default '^list-[^:]*:'
+#mono header bold '^(subject):.*$'
+#color headerbrightcyan default'^(disposition)'
+#color headerbrightcyangreen default'^(mail-)?followup'
+#color headerbrightcyangreenwhite default'^reply'
+#color headerbrightcyangreenwhitebrightwhite default'^(resent)'
+# color headerbrightcyangreenwhitebrightwhitebrightwhite default'^from:'
+#mono indexbold '~h "^content-type: *(multipart/(mixed|signed|encrypted)|application/)"'
+#color indexboldgreen black '~h "^content-type: *multipart/(signed|encrypted)"'
+#color sidebar_new color39 color234
