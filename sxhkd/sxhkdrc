@@ -1,72 +1,90 @@
+#             __      __          __     
+#            /\ \    /\ \        /\ \    
+#  ____  __  \ \ \___\ \ \/'\    \_\ \   
+# /',__\/\ \/'\ \  _ `\ \ , <    /'_` \  
+#/\__, `\/>  </\ \ \ \ \ \ \\`\ /\ \L\ \ 
+#\/\____//\_/\_\\ \_\ \_\ \_\ \_\ \___,_\
+# \/___/ \//\/_/ \/_/\/_/\/_/\/_/\/__,_ /                                        
+# applications
+
 super + d
-        dmenu_run -b -fn Inconsolata -nb black -nf darkgrey -sf black -sb darkgrey
+        j4-dmenu-desktop --dmenu="dmenu -b -fn Tewi -nb black -nf darkgrey -sf black -sb darkgrey"
+
+super + x
+        dmenu_run -b -fn Tewi -nb black -nf darkgrey -sf black -sb darkgrey
 
 super + Return
-        urxvt -e tmux
+        st
+
+super + p
+        i3lock -c 232323
+
+# window manipulation
 
 super + shift + q
         killw $(pfw)
 
-super + {h,j,k,l}
+super + {Left,Down,Up,Right}
         wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
 
-super + alt + {h,j,k,l}
+super + alt + {Left,Down,Up,Right}
         wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
 
 super + Tab
-        focus.sh next
+        wfw next
 
 super + Escape
         killall sxhkd
 
-super + {1,2,3,4,5,6,7,8,9,0}
-        grp.sh view {1,2,3,4,5,6,7,8,9,10}
+super + {1,2,3,4,5}
+        mgfw -t {1,2,3,4,5}
 
-super + shift + {1,2,3,4,5,6,7,8,9,0}
-        grp.sh add $(pfw) {1,2,3,4,5,6,7,8,9,10}
+super + shift + {1,2,3,4,5}
+        mgfw -d all; \
+        mgfw -a {1,2,3,4,5}
 
-super + shift + Backspace
-        grp.sh remove $(pfw)
+super + shift + Return
+        mgfw -d all
 
-super + alt + {1,2,3,4,5,6,7,8,9,0}
-        grp.sh hide {1,2,3,4,5,6,7,8,9,0}
+super + shift + e
+        killall xwait
+
+super + f
+        fls $(pfw)
+
+super + {h,j,k,l}
+        cls {left,down,up,right}
+
+super + shift + {Left,Down,Up,Right}
+        crnr {tl,br,bl,tr}
+
+super + shift + space
+        cw
+
+# volume/music controls
 
 XF86AudioRaiseVolume
-        amixer -D pulse sset Master 5%+
+        amixer sset Master 5%+
 
 XF86AudioLowerVolume
-        amixer -D pulse sset Master 5%-
+        amixer sset Master 5%-
 
 XF86AudioMute
-        amixer -D pulse -q set Master toggle
+        amixer -q set Master toggle
+
+XF86AudioPlay
+        mpc toggle
+
+XF86AudioNext
+        mpc next
+
+XF86AudioPrev
+        mpc prev
+
+# backlight controls
 
 XF86MonBrightnessUp
         xbacklight -inc 10
 
 XF86MonBrightnessDown
         xbacklight -dec 10
-
-XF86AudioPlay
-        cmus-remote -u
-
-XF86AudioNext
-        cmus-remote -n
-
-XF86AudioPrev
-        cmus-remote -r
-
-super + shift + e
-        killall xinit
-
-super + space
-        tile.sh
-
-super + f
-        fullscreen.sh $(pfw)
-
-super + b
-        switch_grid.sh
-
-super + w
-        pfw > ~/.scratch
-        mapw -t $(more ~/.scratch)
