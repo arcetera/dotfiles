@@ -32,6 +32,7 @@ let g:syntastic_warning_symbol = "!"
 let g:startify_custom_header =
   \ map(split(system('fortune dbag | cowsay'), '\n'), '"   ". v:val') + ['','']
 let g:lightline = {
+      \ 'colorscheme': wombat
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]

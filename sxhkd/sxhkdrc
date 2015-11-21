@@ -55,8 +55,8 @@ super + f
 super + {h,j,k,l}
         cls {left,down,up,right}
 
-super + shift + {Left,Down,Up,Right}
-        crnr {tl,br,bl,tr}
+super + shift + {u,i,j,k}
+        crnr {tl,tr,bl,br}
 
 super + shift + space
         cw
