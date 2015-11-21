@@ -1,9 +1,10 @@
-#=================================#
-#||                             ||#
-#||  N C M P C P P  C O N F I G ||#
-#||                             ||#
-#=================================#
-##
+#  ___     ___    ___ ___   _____    ___  _____   _____   
+#/' _ `\  /'___\/' __` __`\/\ '__`\ /'___/\ '__`\/\ '__`\ 
+#/\ \/\ \/\ \__//\ \/\ \/\ \ \ \L\ /\ \__\ \ \L\ \ \ \L\ \
+#\ \_\ \_\ \____\ \_\ \_\ \_\ \ ,__\ \____\ \ ,__/\ \ ,__/
+# \/_/\/_/\/____/\/_/\/_/\/_/\ \ \/ \/____/\ \ \/  \ \ \/ 
+#                             \ \_\         \ \_\   \ \_\ 
+#                              \/_/          \/_/    \/_/ 
 ##### connection settings #####
 mpd_music_dir = "/home/arc/files/music/"
 
@@ -63,5 +64,3 @@ song_window_title_format = "MPD: {%a > }{%t}|{%f}"
 search_engine_display_mode = "columns" (classic/columns)
 follow_now_playing_lyrics = "yes"
 user_interface = "classic" (classic/alternative)
-
-
