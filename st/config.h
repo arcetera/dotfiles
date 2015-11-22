@@ -7,7 +7,7 @@
  */
 #define NOBOLD
 static char font[] = "Tewi:pixelsize=9:antialias=false:autohint=false";
-static int borderpx = 0;
+static int borderpx = 4;
 static char shell[] = "/bin/mksh";
 static char *utmp = NULL;
 static char stty_args[] = "stty raw -echo -iexten echonl";
