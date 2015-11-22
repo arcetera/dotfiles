@@ -50,15 +50,12 @@ soup.accept_policy = cookie_policy.always
 -- character (%) may need to be escaped by placing another % before or after
 -- it to avoid collisions with lua's string.format characters.
 -- See: http://www.lua.org/manual/5.1/manual.html#pdf-string.format
-search_engines = { duckduckgo  = "https://duckduckgo.com/?q=%s",
-    github      = "https://github.com/search?q=%s",
-    google      = "https://google.com/search?q=%s",
-    imdb        = "http://www.imdb.com/find?s=all&q=%s",
-    wikipedia   = "https://en.wikipedia.org/wiki/Special:Search?search=%s",
+search_engines = { ddg = "https://duckduckgo.com/?q=%s",
+    gh          = "https://github.com/search?q=%s",
 }
 
 -- Set google as fallback search engine
-search_engines.default = search_engines.google
+search_engines.default = search_engines.ddg
 -- Use this instead to disable auto-searching
 --search_engines.default = "%s"
 
