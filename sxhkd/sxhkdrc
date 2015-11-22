@@ -8,10 +8,10 @@
 # applications
 
 super + d
-        j4-dmenu-desktop --dmenu="dmenu -b -fn Tewi -nb black -nf darkgrey -sf black -sb darkgrey"
+        j4-dmenu-desktop --dmenu="dmenu -b -fn candy -nb black -nf darkgrey -sf black -sb darkgrey"
 
 super + x
-        dmenu_run -b -fn Tewi -nb black -nf darkgrey -sf black -sb darkgrey
+        dmenu_run -b -fn candy -nb black -nf darkgrey -sf black -sb darkgrey
 
 super + Return
         st
