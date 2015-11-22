@@ -17,7 +17,7 @@ compton --backend=glx --vsync=opengl &
 sxhkd &
 mpd &
 mpdscribble &
-bar | lemonbar -d -B#161719 -f Tewi:size=9 | mksh &
+bar | lemonbar -d -B#161719 -f candy:size=9 | mksh &
 dunst &
 wew | wchg &
 wew > ~/.wmlog &

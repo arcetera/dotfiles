@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 #define NOBOLD
-static char font[] = "Tewi:pixelsize=9:antialias=false:autohint=false";
+static char font[] = "candy:pixelsize=9:antialias=false:autohint=false";
 static int borderpx = 4;
 static char shell[] = "/bin/mksh";
 static char *utmp = NULL;
@@ -16,8 +16,8 @@ static char stty_args[] = "stty raw -echo -iexten echonl";
 static char vtiden[] = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 0.9;
-static float chscale = 0.9;
+static float cwscale = 1;
+static float chscale = 1;
 
 /*
  * word delimiter string
