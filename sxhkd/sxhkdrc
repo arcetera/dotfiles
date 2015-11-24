@@ -58,6 +58,9 @@ super + shift + {u,i,j,k}
 super + shift + space
         cw $(pfw)
 
+super + shift + left
+        dytyl default # personal script, largely doesn't work, will be publishing in wmrc when it's more complete
+
 # volume/music controls
 
 XF86AudioRaiseVolume
