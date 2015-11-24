@@ -14,7 +14,7 @@ super + Return
         st
 
 super + p
-        i3lock -c 232323
+        slock
 
 # window manipulation
 
