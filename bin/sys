@@ -1,0 +1,39 @@
+#!/bin/sh
+#  ____  __  __    ____  
+# /',__\/\ \/\ \  /',__\ 
+#/\__, `\ \ \_\ \/\__, `\
+#\/\____/\/`____ \/\____/
+# \/___/  `/___/> \/___/ 
+#            /\___/      
+#            \/__/       
+# slimmed-down ufetch for my personal use
+
+# info vars
+HOST="$(hostname)"
+OS="Void Linux"
+KERNEL="$(uname -sr)"
+UPTIME="$(uptime -p | sed s:"up "::)"
+PACKAGES="$(xbps-query -l | wc -l)"
+WM="wmutils"
+
+# colors
+c2="$(tput setaf 2)"	
+c7="$(tput setaf 7)"	
+rc="$(tput sgr0)"	
+lc="${bc}${c2}"		
+nc="${bc}${c2}"		
+tc="${bc}${c7}"		
+
+# output
+
+cat <<EOF
+
+${nc}${USER}${rc}${tc}@${rc}${nc}${HOST}${rc}
+${lc}OS${rc}       ${tc}${OS}${rc}
+${lc}KERNEL${rc}   ${tc}${KERNEL}${rc}
+${lc}UPTIME${rc}   ${tc}${UPTIME}${rc}
+${lc}PACKAGES${rc} ${tc}${PACKAGES}${rc}
+${lc}SHELL${rc}    ${tc}${SHELL}${rc}
+${lc}WM${rc}       ${tc}${WM}${rc}
+
+EOF
