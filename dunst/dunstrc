@@ -7,7 +7,7 @@
 # \/__,_ /\/___/ \/_/\/_/\/___/  \/__/
 # <- this tricks vim into using syntax highlighting
 [global]
-    font = Tewi 9
+    font = candy 9
 
     # allow a small subset of html markup:
     # <b>bold</b>
