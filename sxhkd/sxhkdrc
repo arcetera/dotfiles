@@ -8,7 +8,7 @@
 # applications
 
 super + d
-        dmenu_run -b -fn candy -nb black -nf darkgrey -sf black -sb darkgrey
+        interrobang
 
 super + Return
         st
@@ -17,9 +17,6 @@ super + p
         slock
 
 # window manipulation
-
-super + shift + q
-        killw $(pfw)
 
 super + {Left,Down,Up,Right}
         wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
@@ -44,7 +41,7 @@ super + shift + Return
         mgfw -d all
 
 super + shift + e
-        killall xwait
+        killw $(pfw)
 
 super + f
         fls $(pfw)
