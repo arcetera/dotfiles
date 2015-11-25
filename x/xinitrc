@@ -16,9 +16,9 @@ xbacklight -set 50 &
 compton --backend=glx --vsync=opengl &
 sxhkd &
 mpd &
-mpdscribble &
+#mpdscribble &
 bar | lemonbar -d -B#161719 -f candy:size=9 | mksh &
 dunst &
 wew | wchg &
 wew > ~/.wmlog &
-exec xwait
+exec wmrc

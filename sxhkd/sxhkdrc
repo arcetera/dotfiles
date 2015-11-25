@@ -52,14 +52,14 @@ super + f
 super + {h,j,k,l}
         cls {left,down,up,right}
 
-super + shift + {u,i,j,k}
+super + shift + {q,w,a,s}
         crnr {tl,tr,bl,br}
 
 super + shift + space
         cw $(pfw)
 
-super + shift + left
-        dytyl default # personal script, largely doesn't work, will be publishing in wmrc when it's more complete
+super + shift + {Left,Right,Up}
+        dytyl {default,spiral,float} 
 
 # volume/music controls
 
